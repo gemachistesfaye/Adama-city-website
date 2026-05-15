@@ -8,6 +8,7 @@ import Services from './sections/Services';
 import Dashboard from './sections/Dashboard';
 import CityMap from './sections/CityMap';
 import Transportation from './sections/Transportation';
+import Innovation from './sections/Innovation';
 import Tourism from './sections/Tourism';
 import Events from './sections/Events';
 import Footer from './components/Footer';
@@ -30,6 +31,7 @@ const Home = () => (
       <Dashboard />
       <CityMap />
       <Transportation />
+      <Innovation />
       <Tourism />
       <Events />
     </main>
