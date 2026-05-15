@@ -5,6 +5,7 @@ import Hero from './sections/Hero';
 import About from './sections/About';
 import Stats from './sections/Stats';
 import Services from './sections/Services';
+import Dashboard from './sections/Dashboard';
 import Tourism from './sections/Tourism';
 import Events from './sections/Events';
 import Footer from './components/Footer';
@@ -24,6 +25,7 @@ const Home = () => (
       <About />
       <Stats />
       <Services />
+      <Dashboard />
       <Tourism />
       <Events />
     </main>
