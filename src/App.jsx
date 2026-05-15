@@ -7,6 +7,7 @@ import Stats from './sections/Stats';
 import Services from './sections/Services';
 import Dashboard from './sections/Dashboard';
 import CityMap from './sections/CityMap';
+import Transportation from './sections/Transportation';
 import Tourism from './sections/Tourism';
 import Events from './sections/Events';
 import Footer from './components/Footer';
@@ -28,6 +29,7 @@ const Home = () => (
       <Services />
       <Dashboard />
       <CityMap />
+      <Transportation />
       <Tourism />
       <Events />
     </main>
