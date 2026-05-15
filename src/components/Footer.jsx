@@ -1,4 +1,4 @@
-import { MapPin, Mail, Phone, Facebook, Twitter, Instagram } from 'lucide-react';
+import { MapPin, Mail, Phone, MessageCircle, Globe, Share2 } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -14,14 +14,14 @@ const Footer = () => {
               The vibrant heart of Oromia. A city of progress, culture, and endless opportunities.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-slate-400 hover:text-pink-500 transition-colors">
-                <Facebook className="h-5 w-5" />
+              <a href="#" className="text-slate-400 hover:text-pink-500 transition-colors" aria-label="Website">
+                <Globe className="h-5 w-5" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-pink-500 transition-colors">
-                <Twitter className="h-5 w-5" />
+              <a href="#" className="text-slate-400 hover:text-pink-500 transition-colors" aria-label="Community">
+                <MessageCircle className="h-5 w-5" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-pink-500 transition-colors">
-                <Instagram className="h-5 w-5" />
+              <a href="#" className="text-slate-400 hover:text-pink-500 transition-colors" aria-label="Share">
+                <Share2 className="h-5 w-5" />
               </a>
             </div>
           </div>
