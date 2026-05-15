@@ -1,66 +1,42 @@
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import Navbar from './components/Navbar';
-import Hero from './sections/Hero';
-import About from './sections/About';
-import Stats from './sections/Stats';
-import Services from './sections/Services';
-import Dashboard from './sections/Dashboard';
-import CommandCenter from './sections/CommandCenter';
-import CityMap from './sections/CityMap';
-import Transportation from './sections/Transportation';
-import Innovation from './sections/Innovation';
-import Vision2035 from './sections/Vision2035';
-import Tourism from './sections/Tourism';
-import Events from './sections/Events';
-import Footer from './components/Footer';
-import VoiceAssistant from './components/VoiceAssistant';
-import AiPage from './pages/AiPage';
-import PageLoader from './components/PageLoader';
+import { AnimatePresence } from 'framer-motion';
 
-// Main homepage layout
-const Home = () => (
-  <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 0.8, ease: 'easeOut' }}
-    className="min-h-screen bg-[#020617] text-slate-50 flex flex-col"
-  >
-    <Navbar />
-    <main className="flex-grow">
-      <Hero />
-      <About />
-      <Stats />
-      <Services />
-      <Dashboard />
-      <CommandCenter />
-      <CityMap />
-      <Transportation />
-      <Innovation />
-      <Vision2035 />
-      <Tourism />
-      <Events />
-    </main>
-    <Footer />
-    <VoiceAssistant />
-  </motion.div>
-);
+// Pages
+import HomePage from './pages/HomePage';
+import DashboardPage from './pages/DashboardPage';
+import TransportPage from './pages/TransportPage';
+import InnovationPage from './pages/InnovationPage';
+import TourismPage from './pages/TourismPage';
+import Vision2035Page from './pages/Vision2035Page';
+import SmartMapPage from './pages/SmartMapPage';
+import AiPage from './pages/AiPage';
+
+// Components
+import PageLoader from './components/PageLoader';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
 
   return (
     <>
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {!loaded && <PageLoader key="loader" onComplete={() => setLoaded(true)} />}
       </AnimatePresence>
 
       {loaded && (
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/ai-assistant" element={<AiPage />} />
-        </Routes>
+        <AnimatePresence mode="wait">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/dashboard" element={<DashboardPage />} />
+            <Route path="/transport" element={<TransportPage />} />
+            <Route path="/innovation" element={<InnovationPage />} />
+            <Route path="/tourism" element={<TourismPage />} />
+            <Route path="/vision-2035" element={<Vision2035Page />} />
+            <Route path="/smart-map" element={<SmartMapPage />} />
+            <Route path="/ai-assistant" element={<AiPage />} />
+          </Routes>
+        </AnimatePresence>
       )}
     </>
   );
