@@ -4,6 +4,7 @@ import About from './sections/About';
 import Stats from './sections/Stats';
 import Services from './sections/Services';
 import Tourism from './sections/Tourism';
+import Events from './sections/Events';
 import Footer from './components/Footer';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Stats />
         <Services />
         <Tourism />
+        <Events />
       </main>
       <Footer />
     </div>
