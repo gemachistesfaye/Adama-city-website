@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Users, Plane, Smartphone, TrendingUp, ChevronRight } from 'lucide-react';
+import ParticleField from '../components/ParticleField';
 
 const stats = [
   {
@@ -42,6 +43,7 @@ const Hero = () => {
       
       {/* Cinematic Background Gradients */}
       <div className="absolute inset-0 pointer-events-none">
+        <ParticleField />
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-pink-600/20 blur-[150px] rounded-full mix-blend-screen" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-violet-600/20 blur-[150px] rounded-full mix-blend-screen" />
         <div className="absolute top-[20%] right-[20%] w-[30%] h-[30%] bg-blue-600/10 blur-[120px] rounded-full mix-blend-screen" />
