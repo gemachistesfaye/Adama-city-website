@@ -6,6 +6,7 @@ import Stats from './sections/Stats';
 import Services from './sections/Services';
 import Tourism from './sections/Tourism';
 import Events from './sections/Events';
+import AiAssistant from './sections/AiAssistant';
 import Footer from './components/Footer';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Services />
         <Tourism />
         <Events />
+        <AiAssistant />
       </main>
       <Footer />
     </motion.div>
