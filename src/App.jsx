@@ -9,6 +9,7 @@ import Dashboard from './sections/Dashboard';
 import CityMap from './sections/CityMap';
 import Transportation from './sections/Transportation';
 import Innovation from './sections/Innovation';
+import Vision2035 from './sections/Vision2035';
 import Tourism from './sections/Tourism';
 import Events from './sections/Events';
 import Footer from './components/Footer';
@@ -32,6 +33,7 @@ const Home = () => (
       <CityMap />
       <Transportation />
       <Innovation />
+      <Vision2035 />
       <Tourism />
       <Events />
     </main>
