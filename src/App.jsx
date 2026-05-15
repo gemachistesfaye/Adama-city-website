@@ -14,6 +14,7 @@ import Vision2035 from './sections/Vision2035';
 import Tourism from './sections/Tourism';
 import Events from './sections/Events';
 import Footer from './components/Footer';
+import VoiceAssistant from './components/VoiceAssistant';
 import AiPage from './pages/AiPage';
 
 // Main homepage layout
@@ -40,6 +41,7 @@ const Home = () => (
       <Events />
     </main>
     <Footer />
+    <VoiceAssistant />
   </motion.div>
 );
 
