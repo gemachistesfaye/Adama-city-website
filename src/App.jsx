@@ -6,6 +6,7 @@ import About from './sections/About';
 import Stats from './sections/Stats';
 import Services from './sections/Services';
 import Dashboard from './sections/Dashboard';
+import CommandCenter from './sections/CommandCenter';
 import CityMap from './sections/CityMap';
 import Transportation from './sections/Transportation';
 import Innovation from './sections/Innovation';
@@ -30,6 +31,7 @@ const Home = () => (
       <Stats />
       <Services />
       <Dashboard />
+      <CommandCenter />
       <CityMap />
       <Transportation />
       <Innovation />
