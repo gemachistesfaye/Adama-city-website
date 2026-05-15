@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, MapPin } from 'lucide-react';
+import { Menu, X, MapPin, Bot } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
@@ -59,9 +60,13 @@ const Navbar = () => {
                 </a>
               ))}
               
-              <button className="ml-4 px-6 py-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white text-sm font-medium transition-all hover:shadow-[0_0_20px_-5px_rgba(236,72,153,0.3)]">
-                Explore Now
-              </button>
+              <Link
+                to="/ai-assistant"
+                className="ml-4 flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-pink-500/10 to-violet-500/10 hover:from-pink-500/20 hover:to-violet-500/20 border border-pink-500/30 hover:border-pink-500/60 text-white text-sm font-medium transition-all duration-300 hover:shadow-[0_0_20px_-5px_rgba(236,72,153,0.4)]"
+              >
+                <Bot className="h-4 w-4 text-pink-400" />
+                Ask Adama AI
+              </Link>
             </div>
           </div>
 
@@ -99,9 +104,14 @@ const Navbar = () => {
                 </a>
               ))}
               <div className="pt-4 pb-2 px-4">
-                <button className="w-full px-6 py-3 rounded-xl bg-gradient-to-r from-pink-500 to-violet-500 text-white text-base font-medium transition-transform active:scale-95 shadow-lg shadow-pink-500/25">
-                  Explore Now
-                </button>
+                <Link
+                  to="/ai-assistant"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-center gap-2 w-full px-6 py-3 rounded-xl bg-gradient-to-r from-pink-500 to-violet-500 text-white text-base font-medium transition-transform active:scale-95 shadow-lg shadow-pink-500/25"
+                >
+                  <Bot className="h-5 w-5" />
+                  Ask Adama AI
+                </Link>
               </div>
             </div>
           </motion.div>
